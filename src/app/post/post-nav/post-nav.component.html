@@ -1,0 +1,7 @@
+<ul class="scroll-nav">
+  @for (heading of headings; track heading) {
+    <li>
+      <a [ngClass]="{ 'selected-header': selectedHeader === heading }" (click)="headingClicked(heading)">{{ heading.innerHTML }}</a>
+    </li>
+  }
+</ul>

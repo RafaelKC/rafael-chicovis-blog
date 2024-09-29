@@ -17,11 +17,21 @@ export class PostService {
       const item = {
         id: UUID.UUID(),
         postDate: new Date(),
-        name: 'Teste Um',
-        thumbnailUrl: 'https://st.depositphotos.com/2274151/4841/i/950/depositphotos_48410095-stock-photo-sample-blue-square-grungy-stamp.jpg',
+        name: 'Teste Umasdaa sdjd ka sjk dhjkh asjk. ddsada! sjkhd.',
+        thumbnailUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.galafabrics.com%2Fwp-content%2Fuploads%2F2022%2F05%2FSilk-Faille-Red.jpg&f=1&nofb=1&ipt=4165398c83cd855e0c701e634a0c85b9bdbeb8c0052bc15b49956f93df56f7b3&ipo=images',
       } as Post;
       result.push(item);
     }
     return of(result).pipe(delay(1000));
+  }
+
+  public get(postId: string): Observable<Post> {
+    return of({
+      id: UUID.UUID(),
+      postDate: new Date(),
+      name: 'Teste Umasdaa sdjd ka sjk dhjkh asjk. ddsada! sjkhd.',
+      thumbnailUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.galafabrics.com%2Fwp-content%2Fuploads%2F2022%2F05%2FSilk-Faille-Red.jpg&f=1&nofb=1&ipt=4165398c83cd855e0c701e634a0c85b9bdbeb8c0052bc15b49956f93df56f7b3&ipo=images',
+      postDownloadUrl: 'teste.md'
+    } as Post).pipe(delay(1000));
   }
 }

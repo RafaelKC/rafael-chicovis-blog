@@ -1,0 +1,41 @@
+@if (loaded()) {
+  <div class="header">
+    <h1>{{post.name}}</h1>
+    <span class="date">{{post.postDate | date: 'dd/MM/YYYY'}}</span>
+  </div>
+
+  <div class="post-container">
+    <markdown
+      emoji
+      clipboard
+      [src]="post.postDownloadUrl"
+      [clipboardButtonTemplate]="copyBtn"
+      (load)="onLoad()"
+      #markdownConteiner
+    />
+
+    <div class="nav-container">
+      <app-post-nav [headings]="headings"/>
+      @if (showScrollTopButton) {
+        <button mat-mini-fab (click)="scrollTop()" matTooltip="Go to top">
+          <mat-icon>
+            <fa-icon [icon]="faArrowUp" />
+          </mat-icon>
+        </button>
+      }
+    </div>
+
+  </div>
+
+
+  <ng-template #copyBtn>
+    <button mat-icon-button>
+      <mat-icon>
+        <fa-icon [icon]="faCopy" class="copy" size="lg" [fixedWidth]="true"/>
+      </mat-icon>
+    </button>
+  </ng-template>
+
+} @else {
+  <mat-spinner [diameter]="30"/>
+}

@@ -3,5 +3,5 @@ export class Post {
   public thumbnailUrl: string;
   public name: string;
   public postDate: Date;
-  public postDownloadUrl: Date;
+  public postDownloadUrl: string;
 }
