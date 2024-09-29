@@ -1,0 +1,32 @@
+<h1>Posts</h1>
+
+@if (getHasValue()) {
+  <div class="post-container">
+    @for (post of posts; track post) {
+      <p-card class="card" (click)="openPost(post.id)">
+        <ng-template pTemplate="header">
+          <img class="image-header" alt="image"  [src]="post.thumbnailUrl"/>
+        </ng-template>
+
+        <ng-template pTemplate="body" >
+          <h3 class="card-name">{{post.name}}</h3>
+          <span class="post-date">{{post.postDate | date: 'MM/dd/YYYY'}}</span>
+        </ng-template>
+      </p-card>
+    }
+  </div>
+}
+
+<div class="list-footer" [ngClass]="{ 'with-value': getHasValue() }">
+  @if (loading()) {
+    <mat-spinner [diameter]="30"/>
+  } @else if (!getHasValue()) {
+    <p>No itens</p>
+  } @else if (hasMoreItems()) {
+    <div>
+      <button mat-flat-button (click)="loadPosts()">
+        Load more
+      </button>
+    </div>
+  }
+</div>

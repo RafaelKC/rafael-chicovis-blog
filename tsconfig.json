@@ -22,7 +22,17 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "strictPropertyInitialization": false,
+    "baseUrl": "./",
+    "paths": {
+      "@rkc/blog": [
+        "./src/app/tokens"
+      ],
+      "@rkc/blog/*": [
+        "./src/app/tokens/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
