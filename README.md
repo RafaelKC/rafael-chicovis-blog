@@ -1,27 +1,35 @@
 # RafaelChicovisBlog
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+In [English](README.md) | Em [Português](shares/README_PTBR.md)
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+A simple, markdown-based personal blog to share knowledge and experiences. (*Currently under construction...*)
 
-## Code scaffolding
+|![img.png](shares/startup-page-v1.png)| ![img.png](shares/post-page-v1.png)  |
+|--------------------------------------|--------------------------------------|
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> You can see this site in production [here]() (*Coming soon...*)!
 
-## Build
+## Features
+* Responsive Design;
+* Create Posts with Markdown;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tech Stacks
+### **Frontend**
+* [Angular v18;](https://angular.dev)
+* [Angular Material;](https://material.angular.io)
+* [PrimeNg;](https://primeng.org)
+* [Ngx-markdown;](https://jfcere.github.io/ngx-markdown/get-started)
+* [Fontawesome](https://fontawesome.com)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### **Backend** 
+* [.NET v9](https://dotnet.microsoft.com/en-us/) (*In progress...*);
+* [Supabase](https://supabase.com) (*In progress...*);
 
-## Running end-to-end tests
+### **Database**
+* [PostgreSQL](https://www.postgresql.org) on Supabese (*In progress...*);
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### **Hosting** 
+* [GitHub Pages](https://pages.github.com)
