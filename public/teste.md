@@ -1,106 +1,245 @@
-## Permissões
-- Permissão de criar projetos/usar o app;
-- Permissão de compartilhar projetos com outros Tenants;
+---
+__Advertisement :)__
 
-## Licenciamento
-- Adicionar Funcionalidade customizadas ao licenciamento de um app;
-- As permissões de criar projeto e compartilhar com outros Tenants ficam nessas funcionalidade customizadas ;
-- Essas funcionalidades funcionariam como identificadores, isso no front seriam toggle button, e no código seria uma lista de funcionalidades habilitadas;
-- Seria necessário licenciar o app para todos os clientes da korp com os quais a Korp quer compartilhar projetos. Mas pode ser com as funcionalidades listadas acima desabilidatas;
+- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
+  resize in browser.
+- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
+  i18n with plurals support and easy syntax.
 
-- [ ] dsad
-- [X] dsad
+You will like those projects!
 
-> [!NOTE] Outra solução
-> Outra solução é a Korp ter permissão de compartilhar projetos com outro Tenants pelo *Authorization*. Todos os clientes terem o app liberados, mas o controle de se pode ou não criar projetos ficar no próprio app de Projetos, mas só liberado para a Korp. Essa solução parece pior!
+---
 
-## Definição de Clientes
-- <mark style="background: #D2B3FFA6;"><b>Korp</b></mark> -> Tenants;
-- <mark style="background: #D2B3FFA6;"><b>Cliente (Dedini)</b></mark> -> Usuários do sistema
-
-> [!NOTE] Cliente para os Clientes
-> Foi definido que talvez a melhor definição de clientes para para **clientes da Korp** seja a de próprio usuário do sistema. Assim usando apenas o que já tem hoje. Seria nesessário criar um usuário para o cliente da Dedine do Tenant dela para o mesmo conseguir acessar os projetos. Sendo que para compartilhar deveria ser informado o email, assim usuários de outros Tenants também conseguiriam ver o os projetos sem ter conflito de usuário.
-
-> [!NOTE] Clientes da Korp como no ServiceDesk
-> Para a Korp poderia ser feito como no ServiceDesk: a Korp indica um cliente do ERP/CRM accounts, e pelo CNPJ é feito o paralelo com o Tenant.
+# h1 Heading 8-)
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
 
 
+## Horizontal Rules
 
-`console.log('Teste')`
+___
 
-``` typescript
-export class PUCPR {
+---
 
-}
+***
+
+
+## Typographic replacements
+
+Enable typographer option to see result.
+
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+
+test.. test... test..... test?..... test!....
+
+!!!!!! ???? ,,  -- ---
+
+"Smartypants, double quotes" and 'single quotes'
+
+
+## Emphasis
+
+**This is bold text**
+
+__This is bold text__
+
+*This is italic text*
+
+_This is italic text_
+
+~~Strikethrough~~
+
+
+## Blockquotes
+
+
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+
+
+## Lists
+
+Unordered
+
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
+
+Start numbering with offset:
+
+57. foo
+1. bar
+
+
+## Code
+
+Inline `code`
+
+Indented code
+
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
+
+Block code "fences"
+
+```
+Sample text here...
 ```
 
+Syntax highlighting
 
-## Permissões:
-- Permissão de criar projetos/usar o app;
-- Permissão de compartilhar projetos com outros Tenants;
+``` js
+var foo = function (bar) {
+  return bar++;
+};
 
-## Licenciamento
-- Adicionar Funcionalidade customizadas ao licenciamento de um app;
-- As permissões de criar projeto e compartilhar com outros Tenants ficam nessas funcionalidade customizadas ;
-- Essas funcionalidades funcionariam como identificadores, isso no front seriam toggle button, e no código seria uma lista de funcionalidades habilitadas;
-- Seria necessário licenciar o app para todos os clientes da korp com os quais a Korp quer compartilhar projetos. Mas pode ser com as funcionalidades listadas acima desabilidatas;
-
-> [!NOTE] Outra solução
-> Outra solução é a Korp ter permissão de compartilhar projetos com outro Tenants pelo *Authorization*. Todos os clientes terem o app liberados, mas o controle de se pode ou não criar projetos ficar no próprio app de Projetos, mas só liberado para a Korp. Essa solução parece pior!
-
-## Definição de Clientes
-- <mark style="background: #D2B3FFA6;"><b>Korp</b></mark> -> Tenants;
-- <mark style="background: #D2B3FFA6;"><b>Cliente (Dedini)</b></mark> -> Usuários do sistema
-
-> [!NOTE] Cliente para os Clientes
-> Foi definido que talvez a melhor definição de clientes para para **clientes da Korp** seja a de próprio usuário do sistema. Assim usando apenas o que já tem hoje. Seria nesessário criar um usuário para o cliente da Dedine do Tenant dela para o mesmo conseguir acessar os projetos. Sendo que para compartilhar deveria ser informado o email, assim usuários de outros Tenants também conseguiriam ver o os projetos sem ter conflito de usuário.
-
-> [!NOTE] Clientes da Korp como no ServiceDesk
-> Para a Korp poderia ser feito como no ServiceDesk: a Korp indica um cliente do ERP/CRM accounts, e pelo CNPJ é feito o paralelo com o Tenant.
-
-
-
-`console.log('Teste')`
-
-``` typescript
-export class PUCPR {
-
-}
+console.log(foo(5));
 ```
 
+## Tables
 
-## Permissões:
-- Permissão de criar projetos/usar o app;max-height: 100%;
-    overflow: auto;
-- Permissão de compartilhar projetos com outros Tenants;
+| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 
-## Licenciamento
-- Adicionar Funcionalidade customizadas ao licenciamento de um app;
-- As permissões de criar projeto e compartilhar com outros Tenants ficam nessas funcionalidade customizadas ;
-- Essas funcionalidades funcionariam como identificadores, isso no front seriam toggle button, e no código seria uma lista de funcionalidades habilitadas;
-- Seria necessário licenciar o app para todos os clientes da korp com os quais a Korp quer compartilhar projetos. Mas pode ser com as funcionalidades listadas acima desabilidatas;
+Right aligned columns
 
-> [!NOTE] Outra solução
-> Outra solução é a Korp ter permissão de compartilhar projetos com outro Tenants pelo *Authorization*. Todos os clientes terem o app liberados, mas o controle de se pode ou não criar projetos ficar no próprio app de Projetos, mas só liberado para a Korp. Essa solução parece pior!
-
-## Definição de Clientes
-- <mark style="background: #D2B3FFA6;"><b>Korp</b></mark> -> Tenants;
-- <mark style="background: #D2B3FFA6;"><b>Cliente (Dedini)</b></mark> -> Usuários do sistema
-
-> [!NOTE] Cliente para os Clientes
-> Foi definido que talvez a melhor definição de clientes para para **clientes da Korp** seja a de próprio usuário do sistema. Assim usando apenas o que já tem hoje. Seria nesessário criar um usuário para o cliente da Dedine do Tenant dela para o mesmo conseguir acessar os projetos. Sendo que para compartilhar deveria ser informado o email, assim usuários de outros Tenants também conseguiriam ver o os projetos sem ter conflito de usuário.
-
-> [!NOTE] Clientes da Korp como no ServiceDesk
-> Para a Korp poderia ser feito como no ServiceDesk: a Korp indica um cliente do ERP/CRM accounts, e pelo CNPJ é feito o paralelo com o Tenant.
+| Option | Description |
+| ------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 
 
+## Links
 
-`console.log('Teste')`
+[link text](http://dev.nodeca.com)
 
-``` typescript
-export class PUCPR {
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
-}
-```
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a reference later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+
+## Plugins
+
+The killer feature of `markdown-it` is very effective support of
+[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
+
+
+### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
+
+> Classic markup: :wink: :cry: :laughing: :yum:
+>
+> Shortcuts (emoticons): :-) :-( 8-) ;)
+
+see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
+
+
+### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
+
+- 19^th^
+- H~2~O
+
+
+### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
+
+++Inserted text++
+
+
+### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
+
+==Marked text==
+
+
+### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
+
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.
+
+
+### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
+
+Term 1
+
+:   Definition 1
+with lazy continuation.
+
+Term 2 with *inline markup*
+
+:   Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+
+_Compact style:_
+
+Term 1
+~ Definition 1
+
+Term 2
+~ Definition 2a
+~ Definition 2b
+
+
+### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
+
+This is HTML abbreviation example.
+
+It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+
+*[HTML]: Hyper Text Markup Language
+
+### [Custom containers](https://github.com/markdown-it/markdown-it-container)
+
+::: warning
+*here be dragons*
+:::
