@@ -4,18 +4,18 @@ In [English](README.md) | Em [Português](shares/README_PTBR.md)
 
 ---
 
-A simple, markdown-based personal blog to share knowledge and experiences. (*Currently under construction...*)
+Um blog pessoal simples, baseado em markdown, para compartilhar conhecimentos e experiências. (*Atualmente em construção...*)
 
-|![img.png](shares/startup-page-v1.png)| ![img.png](shares/post-page-v1.png)  |
-|--------------------------------------|--------------------------------------|
+| ![img.png](startup-page-v1.png) | ![img.png](post-page-v1.png)  |
+|---------------------------------|-------------------------------|
 
-> You can see this site in production [here]() (*Coming soon...*)!
+> Você pode ver este site em produção [aqui]() (*Em breve...*)!
 
-## Features
-* Responsive Design;
-* Create Posts with Markdown;
+## Funcionalidades
+* Design Responsivo;
+* Criar Posts com Markdown;
 
-## Tech Stacks
+## Tecnologias Utilizadas
 ### **Frontend**
 * [Angular v18;](https://angular.dev)
 * [Angular Material;](https://material.angular.io)
@@ -25,11 +25,33 @@ A simple, markdown-based personal blog to share knowledge and experiences. (*Cur
 
 
 ### **Backend**
-* [.NET v9](https://dotnet.microsoft.com/en-us/) (*In progress...*);
-* [Supabase](https://supabase.com) (*In progress...*);
+* [.NET v9](https://dotnet.microsoft.com/en-us/) (*Em progresso...*);
+* [Supabase](https://supabase.com) (*Em progresso...*);
 
-### **Database**
-* [PostgreSQL](https://www.postgresql.org) on Supabese (*In progress...*);
+### **Banco de dados**
+* [PostgreSQL](https://www.postgresql.org) no Supabese (*Em progresso...*);
 
-### **Hosting**
+### **Hospedagem**
 * [GitHub Pages](https://pages.github.com)
+
+## Rode esse projeto
+### Rode o frontend
+#### Requisitos
+* Node.js (acima da v18): [Instale aqui;](https://nodejs.org/en)
+* Angular CLI (acima da v18): rode esse comando:
+```bash
+npm install -g @angular/cli
+```
+#### Step by step
+* Clone o repositório e instale os pacotes:
+```bash
+git clone https://github.com/RafaelKC/rafael-chicovis-blog.git |
+cd rafael-chicovis-blog |
+npm i
+```
+* Rode o servidor
+```bash
+ ng serve
+```
+
+
