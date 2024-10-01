@@ -1,6 +1,6 @@
 # RafaelChicovisBlog
 
-In [English](../README.md) | Em [Português](shares/README_PTBR.md)
+In [English](../README.md) | Em [Português](README_PTBR.md)
 
 ---
 
