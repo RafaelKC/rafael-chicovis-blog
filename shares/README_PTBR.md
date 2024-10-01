@@ -34,6 +34,24 @@ Um blog pessoal simples, baseado em markdown, para compartilhar conhecimentos e 
 ### **Hospedagem**
 * [GitHub Pages](https://pages.github.com)
 
+## Rode esse projeto
+### Rode o frontend
+#### Requisitos
+* Node.js (acima da v18): [Instale aqui;](https://nodejs.org/en)
+* Angular CLI (acima da v18): rode esse comando:
+```bash
+npm install -g @angular/cli
+```
+#### Step by step
+* Clone o repositório e instale os pacotes:
+```bash
+git clone https://github.com/RafaelKC/rafael-chicovis-blog.git |
+cd rafael-chicovis-blog |
+npm i
+```
+* Rode o servidor
+```bash
+ ng serve
+```
 
-## Passo a passo
 

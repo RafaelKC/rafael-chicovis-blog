@@ -33,3 +33,23 @@ A simple, markdown-based personal blog to share knowledge and experiences. (*Cur
 
 ### **Hosting** 
 * [GitHub Pages](https://pages.github.com)
+
+## Run this project
+### Run front end
+#### Requirements
+* Node.js (up to v18): [Install Here;](https://nodejs.org/en)
+* Angular CLI (up to v18): run this command:
+```bash
+npm install -g @angular/cli
+```
+#### Step by step
+* Clone the project and install packages:
+```bash
+git clone https://github.com/RafaelKC/rafael-chicovis-blog.git |
+cd rafael-chicovis-blog |
+npm i
+```
+* Run server
+```bash
+ ng serve
+```
