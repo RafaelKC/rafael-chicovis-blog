@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace RafaelChicovisBlog.Database;
+namespace RafaelChicovisBlog.Infra.Database;
 
 public static class AddDatabaseExtension
 {

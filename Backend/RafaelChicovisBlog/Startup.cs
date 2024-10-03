@@ -1,4 +1,7 @@
-﻿using RafaelChicovisBlog.Database;
+﻿using RafaelChicovisBlog.Infra.Database;
+using RafaelChicovisBlog.Infra.Supabse;
+using RafaelChicovisBlog.Infra.Auth;
+using RafaelChicovisBlog.Infra;
 
 namespace RafaelChicovisBlog;
 
@@ -15,6 +18,9 @@ public class Startup
   {
     services
       .AddDatabase(Configuration)
+      .AddSupabase(Configuration)
+      .AddAuthentication(Configuration)
+      .AddSingletons()
       .AddSwaggerGen()
       .AddCors()
       .AddControllers();
