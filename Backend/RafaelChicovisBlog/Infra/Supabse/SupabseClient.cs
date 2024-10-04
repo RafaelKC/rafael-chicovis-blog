@@ -34,15 +34,6 @@ public class SupabseClient: Client, ISupabseClient
 
     private async Task<IStorageFileApi<FileObject>> LazyGetPostsStorage()
     {
-        var hasPostBucket = (await Storage.GetBucket(AppConfig.SupabeseBucketName)) != null;
-        if (!hasPostBucket)
-        {
-          await Storage.CreateBucket(AppConfig.SupabeseBucketName, new BucketUpsertOptions
-          {
-            AllowedMimes = ["text/markdown"],
-            Public = true
-          });
-        }
         return Storage.From(AppConfig.SupabeseBucketName);
     }
 }

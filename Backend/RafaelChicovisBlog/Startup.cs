@@ -20,7 +20,7 @@ public class Startup
       .AddDatabase(Configuration)
       .AddSupabase(Configuration)
       .AddAuthentication(Configuration)
-      .AddSingletons()
+      .AddTransients()
       .AddSwaggerGen()
       .AddCors()
       .AddControllers();

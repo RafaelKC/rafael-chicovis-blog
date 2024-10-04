@@ -1,9 +1,12 @@
 using Microsoft.EntityFrameworkCore;
+using RafaelChicovisBlog.Domains;
 
 namespace RafaelChicovisBlog.Infra.Database;
 
 public class RCBlogDbContext : DbContext
 {
+
+  public DbSet<Post> Posts { get; set; }
 
   public RCBlogDbContext()
   {

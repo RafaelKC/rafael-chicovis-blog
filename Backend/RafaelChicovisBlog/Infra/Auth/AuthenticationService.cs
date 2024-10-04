@@ -29,7 +29,7 @@ public class AuthenticationService: IAuthenticationService
         Token = session.AccessToken,
       };
     }
-    catch (Exception)
+    catch (Exception e)
     {
       return new LoginOutput
       {
