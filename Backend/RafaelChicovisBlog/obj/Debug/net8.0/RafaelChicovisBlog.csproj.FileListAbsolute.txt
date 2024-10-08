@@ -21,7 +21,6 @@
 /home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.RafaelChicovisBlog.props
 /home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/obj/Debug/net8.0/staticwebassets.pack.json
 /home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/obj/Debug/net8.0/scopedcss/bundle/RafaelChicovisBlog.styles.css
-/home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/obj/Debug/net8.0/RafaelCh.D21C978C.Up2Date
 /home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/obj/Debug/net8.0/RafaelChicovisBlog.dll
 /home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/obj/Debug/net8.0/refint/RafaelChicovisBlog.dll
 /home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/obj/Debug/net8.0/RafaelChicovisBlog.pdb
@@ -128,3 +127,4 @@
 /home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/obj/Debug/net8.0/RafaelChicovisBlog.MvcApplicationPartsAssemblyInfo.cs
+/home/rafaelchicovis/git/rafael-chicovis-blog/Backend/RafaelChicovisBlog/obj/Debug/net8.0/RafaelChicovisBlog.csproj.CopyComplete

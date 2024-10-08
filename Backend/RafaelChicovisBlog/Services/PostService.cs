@@ -3,7 +3,6 @@ using RafaelChicovisBlog.Domains;
 using RafaelChicovisBlog.Dtos;
 using RafaelChicovisBlog.Infra.Database;
 using RafaelChicovisBlog.Infra.Supabse;
-using RafaelChicovisBlog.Utils;
 using FileOptions = Supabase.Storage.FileOptions;
 
 namespace RafaelChicovisBlog.Services;
@@ -86,12 +85,10 @@ public class PostService: IPostService
     var thumnailFile = files.FirstOrDefault(f => f.ContentType.Contains("image"));
     if (thumnailFile is null) throw new FileNotFoundException();
 
-    var tempPath = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
-    await using (var stream = FileStreamInitializer.Initializer(tempPath))
-    {
-      await thumnailFile.CopyToAsync(stream);
-      return (File.ReadAllBytes(tempPath), thumnailFile);
-    }
+    using var fileStream = thumnailFile.OpenReadStream();
+    byte[] bytes = new byte[fileStream.Length];
+    fileStream.Read(bytes, 0, (int)thumnailFile.Length);
+    return (bytes, thumnailFile);
   }
 
   private async Task<(Byte[], IFormFile)> GetPost(List<IFormFile> files)
@@ -99,12 +96,10 @@ public class PostService: IPostService
     var postFile = files.FirstOrDefault(f => f.ContentType.Contains("markdown"));
     if (postFile is null) throw new FileNotFoundException();
 
-    var tempPath = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
-    await using (var stream = FileStreamInitializer.Initializer(tempPath))
-    {
-      await postFile.CopyToAsync(stream);
-      return (File.ReadAllBytes(tempPath), postFile);
-    }
+    using var fileStream = postFile.OpenReadStream();
+    byte[] bytes = new byte[fileStream.Length];
+    fileStream.Read(bytes, 0, (int)postFile.Length);
+    return (bytes, postFile);
   }
 }
 

@@ -1,7 +1,9 @@
-import { Injectable } from '@angular/core';
-import {delay, Observable, of} from "rxjs";
+import {Injectable} from '@angular/core';
+import {Observable} from "rxjs";
 import {GetListInput, Post} from "@rkc/blog/models";
-import {UUID} from "angular2-uuid";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../../environments/environment";
+import {toHttpParams} from "@rkc/blog/functions";
 
 
 @Injectable({
@@ -9,29 +11,15 @@ import {UUID} from "angular2-uuid";
 })
 export class PostService {
 
-  constructor() { }
+  constructor(private readonly httpClient: HttpClient) {
+  }
 
   public getPosts(input: GetListInput): Observable<Post[]> {
-    const result = [] as Post[];
-    for (let i = 0; i < input.maxResultCount; i++) {
-      const item = {
-        id: UUID.UUID(),
-        postDate: new Date(),
-        name: 'Teste Umasdaa sdjd ka sjk dhjkh asjk. ddsada! sjkhd.',
-        thumbnailUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.galafabrics.com%2Fwp-content%2Fuploads%2F2022%2F05%2FSilk-Faille-Red.jpg&f=1&nofb=1&ipt=4165398c83cd855e0c701e634a0c85b9bdbeb8c0052bc15b49956f93df56f7b3&ipo=images',
-      } as Post;
-      result.push(item);
-    }
-    return of(result).pipe(delay(1000));
+    const params = toHttpParams(input);
+    return this.httpClient.get<Post[]>(`${environment.apiUrl}posts`, {params});
   }
 
   public get(postId: string): Observable<Post> {
-    return of({
-      id: UUID.UUID(),
-      postDate: new Date(),
-      name: 'Teste Umasdaa sdjd ka sjk dhjkh asjk. ddsada! sjkhd.',
-      thumbnailUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.galafabrics.com%2Fwp-content%2Fuploads%2F2022%2F05%2FSilk-Faille-Red.jpg&f=1&nofb=1&ipt=4165398c83cd855e0c701e634a0c85b9bdbeb8c0052bc15b49956f93df56f7b3&ipo=images',
-      postDownloadUrl: 'teste.md'
-    } as Post).pipe(delay(1000));
+    return this.httpClient.get<Post>(`${environment.apiUrl}posts/${postId}`);
   }
 }
