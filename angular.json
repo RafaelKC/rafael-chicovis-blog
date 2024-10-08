@@ -136,6 +136,14 @@
               "node_modules/clipboard/dist/clipboard.min.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://rafaelkc.github.io/rafael-chicovis-blog/",
+            "name": "Rafael Chicovis Blog",
+            "email": "contato.rafael.chicovis@gmail.com"
+          }
         }
       }
     }
