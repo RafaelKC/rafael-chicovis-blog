@@ -20,6 +20,8 @@
             "outputPath": "dist/rafael-chicovis-blog",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/rafael-chicovis-blog/",
+            "deployUrl": "/rafael-chicovis-blog/",
             "polyfills": [
               "zone.js"
             ],
@@ -54,10 +56,7 @@
               "node_modules/clipboard/dist/clipboard.min.js"
             ],
             "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "prerender": true
           },
           "configurations": {
             "production": {
@@ -138,12 +137,7 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "baseHref": "https://rafaelkc.github.io/rafael-chicovis-blog/",
-            "name": "Rafael Chicovis Blog",
-            "email": "contato.rafael.chicovis@gmail.com"
-          }
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
