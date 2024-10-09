@@ -36,7 +36,6 @@
   @media only screen and (min-width: 800px) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
-    justify-content: start;
     .card {
       min-width: 250px;
       img.image-header {
