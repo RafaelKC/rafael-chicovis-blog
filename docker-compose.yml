@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./Backend/RafaelChicovisBlog
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - "7085:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=User Id=postgres.qcxfnkspjubgyiojshfg;Password=MeQpp1@!QcSR25qnQ6gC%NAU1a!9;Server=aws-0-sa-east-1.pooler.supabase.com;Port=5432;Database=postgres;
+      - Supabase__SupabaseUrl=https://qcxfnkspjubgyiojshfg.supabase.co
+      - Supabase__SupabaseKey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjeGZua3NwanViZ3lpb2pzaGZnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjc5MTI3MjcsImV4cCI6MjA0MzQ4ODcyN30.iGftpz5G6sC0Kr-HGNMEz7kP-JBdpJntVZcPVD_buF4
+      - Authentication__Audience=authenticated
+      - Authentication__Issuer=https://qcxfnkspjubgyiojshfg.supabase.co/auth/v1
+      - Authentication__Authority=https://qcxfnkspjubgyiojshfg.supabase.co/auth/v1
+      - Authentication__Key=ZDrRWxV3i8/0fPnmG75NVf810p1kgqM+Pq2lv1GbTcNFWukRhYLdkr3Wh4FVwg+TZS3MxY5sECUjQ8qD7oDRhQ==
+    networks:
+      - app-network
+
+
+  frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
