@@ -9,6 +9,7 @@ import {DatePipe, NgClass, NgOptimizedImage} from "@angular/common";
 import {CardModule} from 'primeng/card';
 import {ImageModule} from "primeng/image";
 import {Router} from "@angular/router";
+import {Title} from "@angular/platform-browser";
 
 
 @Component({
@@ -24,11 +25,12 @@ export class PostsListComponent implements OnInit {
   public hasMoreItems = signal(false);
   public posts: Post[];
 
-  constructor(private postService: PostService, private router: Router) {
+  constructor(private postService: PostService, private router: Router, private title: Title) {
   }
 
   public ngOnInit(): void {
     this.loadPosts();
+    this.title.setTitle('Rafael Chicovis');
   }
 
   public getHasValue(): boolean {

@@ -20,6 +20,7 @@ import {ActivatedRoute} from "@angular/router";
 import {of, Subscription, switchMap} from "rxjs";
 import {DatePipe} from "@angular/common";
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-post',
@@ -46,6 +47,8 @@ export class PostComponent implements OnInit, AfterViewInit, OnDestroy {
     private service: PostService,
     private activatedRoute: ActivatedRoute,
     private changeDetector: ChangeDetectorRef,
+    private meta: Meta,
+    private title: Title
   ) {
   }
 
@@ -63,6 +66,7 @@ export class PostComponent implements OnInit, AfterViewInit, OnDestroy {
         this.loaded.set(true);
         this.changeDetector.detectChanges();
         this.setShowScrollButtonSub();
+        this.setMetaTags();
       }
     })
   }
@@ -96,5 +100,16 @@ export class PostComponent implements OnInit, AfterViewInit, OnDestroy {
     markdownElement?.addEventListener('scroll', () => {
       this.showScrollTopButton = markdownElement.scrollTop > 50;
     });
+  }
+
+  private setMetaTags() {
+    this.title.setTitle(this.post.name);
+    this.meta.addTags([
+      { name: 'description', content: this.post.name },
+      { property: 'og:title', content: this.post.name },
+      { property: 'og:description', content: this.post.name },
+      { property: 'og:image', content: this.post.thumbnailUrl },
+      { property: 'og:url', content: this.post.postDownloadUrl },
+    ]);
   }
 }
