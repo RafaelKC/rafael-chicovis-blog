@@ -143,13 +143,54 @@
             ]
           }
         },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "baseHref": "https://rafaelkc.github.io/rafael-chicovis-blog/",
-            "name": "Rafael Chicovis Blog",
-            "email": "contato.rafael.chicovis@gmail.com"
+            "browserTarget": "rafael-chicovis-blog:build",
+            "serverTarget": "rafael-chicovis-blog:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "rafael-chicovis-blog:build:production",
+              "serverTarget": "rafael-chicovis-blog:server:production"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/rafael-chicovis-blog/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.app.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
           }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "rafael-chicovis-blog:build:production",
+            "serverTarget": "rafael-chicovis-blog:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
