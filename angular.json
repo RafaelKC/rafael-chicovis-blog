@@ -61,22 +61,22 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "10mB",
-                  "maximumError": "15MB"
+                  "maximumWarning": "5MB",
+                  "maximumError": "10MB"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "10kB",
                   "maximumError": "20kB"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -89,52 +89,17 @@
           },
           "defaultConfiguration": "production"
         },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/rafael-chicovis-blog/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.app.json"
-          },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "sourceMap": false,
-              "optimization": true
+              "buildTarget": "rafael-chicovis-blog:build:production"
+            },
+            "development": {
+              "buildTarget": "rafael-chicovis-blog:build:development"
             }
-          }
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "options": {
-            "browserTarget": "rafael-chicovis-blog:build",
-            "serverTarget": "rafael-chicovis-blog:server"
           },
-          "configurations": {
-            "production": {
-              "browserTarget": "rafael-chicovis-blog:build:production",
-              "serverTarget": "rafael-chicovis-blog:server:production"
-            }
-          }
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "browserTarget": "rafael-chicovis-blog:build:production",
-            "serverTarget": "rafael-chicovis-blog:server:production",
-            "routes": [
-              "/"
-            ]
-          },
-          "configurations": {
-            "production": {}
-          }
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
