@@ -10,13 +10,13 @@ services:
       - "4500:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ConnectionStrings__DefaultConnection=[CONNECTION_STRING]
-      - Supabase__SupabaseUrl=[SUPABASE_URL]
-      - Supabase__SupabaseKey=[SUPABASE_KEY]
+      - ConnectionStrings__DefaultConnection=${CONNECTION_STRING}
+      - Supabase__SupabaseUrl=${SUPABASE_URL}
+      - Supabase__SupabaseKey=${SUPABASE_KEY}
       - Authentication__Audience=authenticated
-      - Authentication__Issuer=[SUPABASE_URL]/auth/v1
-      - Authentication__Authority=[SUPABASE_URL]/auth/v1
-      - Authentication__Key=[SUPABASE_AUTH_KEY]
+      - Authentication__Issuer=${SUPABASE_URL}/auth/v1
+      - Authentication__Authority=${SUPABASE_URL}/auth/v1
+      - Authentication__Key=${SUPABASE_AUTH_KEY}
     networks:
       - app-network
 
