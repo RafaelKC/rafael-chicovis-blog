@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://172.17.0.1:4500/'
+  apiUrl: 'https://rafael-chicovis-blog-backend.onrender.com/'
 };
