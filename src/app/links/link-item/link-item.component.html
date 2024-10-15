@@ -1,0 +1,10 @@
+@if (link().link) {
+  <a [href]="link().link">
+    <div (mouseenter)="setColor()" (mouseleave)="resetColor()">
+      <fa-icon [style.color]="fontColor" [icon]="link().icon" size="xl"/>
+      <h3 [style.color]="fontColor">{{link().name}}</h3>
+      <span></span>
+    </div>
+  </a>
+}
+

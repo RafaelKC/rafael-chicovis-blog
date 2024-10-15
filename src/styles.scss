@@ -10,10 +10,11 @@ html {
   @include mat.all-component-themes(m3.$dark-theme);
 
   --font-color: #FFFFFF;
+  --background-color: #0F1A20;
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #0F1A20; color: var(--font-color) }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: var(--background-color); color: var(--font-color) }
 a {
   color: var(--mat-app-background-color);
   text-decoration: none;

@@ -1,0 +1,29 @@
+a {
+  width: 100%;
+}
+
+h3 {
+  margin: 10px 0;
+  color: var(--background-color);
+  transition: color 0.2s ease;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--mat-toolbar-container-text-color);
+  transition: transform 0.2s cubic-bezier(0, 0.2, 0.5, 3);
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+fa-icon {
+  height: fit-content;
+  color: var(--background-color);
+  transition: color 0.2s ease;
+}
