@@ -1,5 +1,5 @@
 @if (link().link) {
-  <a [href]="link().link">
+  <a [href]="link().link" [target]="link().target ??  '_black'">
     <div (mouseenter)="setColor()" (mouseleave)="resetColor()">
       <fa-icon [style.color]="fontColor" [icon]="link().icon" size="xl"/>
       <h3 [style.color]="fontColor">{{link().name}}</h3>
