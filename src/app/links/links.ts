@@ -16,7 +16,7 @@ export const links: Link[] = [
     link: 'https://t.me/RafaelChicovis',
     icon: faTelegram,
     name: 'Telegram',
-    color: '#1A93E3'
+    color: '#1c99f1'
   },
   {
     link: 'https://api.whatsapp.com/send?phone=5541991421020',
