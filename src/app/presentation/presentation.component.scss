@@ -1,4 +1,4 @@
-:host {
+app-presentation {
   padding: 16px;
   display: flex;
   align-items: center;
@@ -16,7 +16,6 @@
     object-fit: cover;
     object-position: right;
     border-radius: 50%;
-    border: 8px white solid;
   }
 
   h1 {
@@ -84,4 +83,12 @@ p {
   .presentation-actions {
     gap: 8px;
   }
+}
+
+.light-theme .image-container img {
+  border: 8px #000000 solid;
+}
+
+.dark-theme .image-container img {
+  border: 8px #FFFFFF solid;
 }

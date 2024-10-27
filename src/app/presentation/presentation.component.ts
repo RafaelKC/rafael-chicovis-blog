@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
 import {MatDialogModule} from '@angular/material/dialog';
@@ -14,7 +14,8 @@ import {Credentials} from "./credentials";
   imports: [MatButtonModule, RouterLink, MatDialogModule],
   templateUrl: './presentation.component.html',
   styleUrl: './presentation.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
 })
 export class PresentationComponent {
   public badges: string[] = [

@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, Component, ViewEncapsulation} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,9 +17,14 @@ import {MatTooltipModule} from "@angular/material/tooltip";
   styleUrl: './app.component.scss',
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   public faLinkedinIn = faLinkedinIn;
   public faGithub = faGithub;
   public faTree = faTree;
   public faSquareRss = faSquareRss;
+
+  public ngAfterViewInit() {
+    document.body.classList.add('dark-theme');
+  }
+
 }
