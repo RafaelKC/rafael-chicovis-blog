@@ -17,10 +17,6 @@ html {
     --selection-color: #ffffff;
     --mat-toolbar-container-background-color: #000000;
     --mat-toolbar-container-text-color: #FFFFFF;
-
-    --mat-dialog-container-max-width: 50vw;
-    --mat-dialog-container-min-width: 50vw;
-    --mat-dialog-container-small-max-width: 95vw;
   }
 
   .dark-theme {
@@ -31,13 +27,21 @@ html {
     --higlght-font-color: #888888;
     --mat-app-background-color: #29292b;
     --selection-color: #0F1A20;
+  }
 
+  .dark-theme, .light-theme {
     --mat-dialog-container-max-width: 50vw;
     --mat-dialog-container-min-width: 50vw;
     --mat-dialog-container-small-max-width: 95vw;
   }
+}
 
-
+@media only screen and (max-width: 800px) {
+  html {
+    .dark-theme, .light-theme {
+      --mat-dialog-container-min-width: 95vw;
+    }
+  }
 }
 
 html, body { height: 100%; }
@@ -114,10 +118,4 @@ input[type="checkbox"]:checked::before {
 input[type="checkbox"]:checked {
   background-color: var(--mat-app-background-color);
   border-color: var(--mat-app-background-color);
-}
-
-@media only screen and (max-width: 800px) {
-  html {
-    --mat-dialog-container-min-width: 95vw;
-  }
 }

@@ -6,6 +6,7 @@ import {
   PresentationItemShowServiceService
 } from "./presentation-items-show-modal/presentation-item-show-service.service";
 import {Credentials} from "./credentials";
+import {Title} from "@angular/platform-browser";
 
 
 @Component({
@@ -31,7 +32,11 @@ export class PresentationComponent {
     'jira-original-wordmark.svg'
   ];
 
-  constructor(private readonly itemsDialogService: PresentationItemShowServiceService) {
+  constructor(
+    private readonly itemsDialogService: PresentationItemShowServiceService,
+    private title: Title
+    ) {
+    this.title.setTitle('Rafael Chicovis');
   }
 
   public openCredentialsDialog(): void {
