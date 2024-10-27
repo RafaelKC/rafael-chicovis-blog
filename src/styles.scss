@@ -12,12 +12,15 @@ html {
   --font-color: #FFFFFF;
   --higlght-font-color: #888888;
   --background-color: #454547;
+
+  --mat-dialog-container-max-width: 50vw;
+  --mat-dialog-container-min-width: 50vw;
+  --mat-dialog-container-small-max-width: 95vw;
 }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: var(--background-color); color: var(--font-color) }
 body {
-  //background: url(/backgroud.avif) center;
   background-size: cover;
   backdrop-filter: brightness(0.5) blur(10px);
 }
@@ -88,4 +91,10 @@ input[type="checkbox"]:checked::before {
 input[type="checkbox"]:checked {
   background-color: var(--mat-app-background-color);
   border-color: var(--mat-app-background-color);
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    --mat-dialog-container-min-width: 95vw;
+  }
 }

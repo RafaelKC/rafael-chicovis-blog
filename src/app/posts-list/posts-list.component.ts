@@ -30,7 +30,7 @@ export class PostsListComponent implements OnInit {
 
   public ngOnInit(): void {
     this.loadPosts();
-    this.title.setTitle('Rafael Chicovis');
+    this.title.setTitle('Rafael Chicovis`s Blog');
   }
 
   public getHasValue(): boolean {
@@ -50,6 +50,6 @@ export class PostsListComponent implements OnInit {
   }
 
   public async openPost(id: string): Promise<void> {
-    await this.router.navigate([id]);
+    await this.router.navigate(['posts', id]);
   }
 }

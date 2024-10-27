@@ -17,7 +17,7 @@
     <div class="nav-container">
       <app-post-nav [headings]="headings"/>
       @if (showScrollTopButton) {
-        <button mat-mini-fab (click)="scrollTop()" matTooltip="Go to top">
+        <button mat-mini-fab (click)="scrollTop()" matTooltip="Go to top" class="top-btn">
           <mat-icon>
             <fa-icon [icon]="faArrowUp" />
           </mat-icon>

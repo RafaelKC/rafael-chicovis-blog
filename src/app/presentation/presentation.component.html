@@ -1,0 +1,30 @@
+<div class="image-container">
+  <img alt="Rafael Chicovis image" src="/personal.jpg">
+  <div>
+    <h1>Rafael Chicovis</h1>
+    <h2>Full Stack developer</h2>
+  </div>
+</div>
+
+<div class="information">
+  <p>
+    I'm Rafael Chicovis, a Full Stack Developer specializing in Angular and C#/.NET since 2021. I’m currently leading
+    projects at Korp, including a project management app and other internal tools. I’m also studying Software
+    Engineering at PUCPR in Curitiba, Brazil. My main skills include PostgreSQL, SQLServer, REST APIs, Docker, and agile
+    methodologies like Scrum and Kanban.
+  </p>
+
+  <h4>Some skills</h4>
+  <div class="badges">
+    @for (badge of badges; track badge) {
+      <img [alt]="badge" [src]="'/stacks/' + badge">
+    }
+  </div>
+
+  <h4>Others links</h4>
+  <div class="presentation-actions">
+    <button mat-flat-button routerLink="/posts">Posts</button>
+    <button mat-flat-button (click)="openProjectsDialog()">Projects</button>
+    <button mat-flat-button (click)="openCredentialsDialog()">Certificates</button>
+  </div>
+</div>

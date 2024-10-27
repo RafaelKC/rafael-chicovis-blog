@@ -1,0 +1,87 @@
+:host {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 50%;
+    border: 8px white solid;
+  }
+
+  h1 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-size: 60px;
+    margin: 8px;
+  }
+}
+
+.badges {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+p {
+  width: 350px;
+  text-align: justify;
+  line-height: 30px;
+}
+
+.presentation-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 800px) {
+  :host {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .image-container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-width: 3px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+  }
+
+  p {
+    width: 100%;
+  }
+
+  .presentation-actions {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,17 @@
+<button mat-dialog-close mat-icon-button matTooltip="Close" (click)="close()">
+  <fa-icon [icon]="faTimes"/>
+</button>
+
+<mat-dialog-content class="mat-typography">
+  @for (item of items; track items) {
+    <div class="item-container" [ngClass]="{'clickable': Boolean(item.itemUrl) }" (click)="goTo(item.itemUrl)">
+      <img [src]="item.imageUrl" [alt]="item.name">
+      <div class="item-content">
+        <h3>{{ item.name }}</h3>
+        <h6>{{ item.observation }}</h6>
+      </div>
+    </div>
+  } @empty {
+    <h2>No items here.</h2>
+  }
+</mat-dialog-content>
