@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
 import {MatDialogModule} from '@angular/material/dialog';
@@ -6,7 +6,8 @@ import {
   PresentationItemShowServiceService
 } from "./presentation-items-show-modal/presentation-item-show-service.service";
 import {Credentials} from "./credentials";
-import {Title} from "@angular/platform-browser";
+import {Meta, Title} from "@angular/platform-browser";
+import {environment} from "../../environments/environment";
 
 
 @Component({
@@ -18,7 +19,7 @@ import {Title} from "@angular/platform-browser";
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })
-export class PresentationComponent {
+export class PresentationComponent implements OnInit {
   public badges: string[] = [
     'typescript-original.svg',
     'angular-original.svg',
@@ -34,9 +35,12 @@ export class PresentationComponent {
 
   constructor(
     private readonly itemsDialogService: PresentationItemShowServiceService,
-    private title: Title
-    ) {
-    this.title.setTitle('Rafael Chicovis');
+    private title: Title,
+    private meta: Meta
+    ) {}
+
+  public ngOnInit(): void {
+    this.setMetaTags();
   }
 
   public openCredentialsDialog(): void {
@@ -45,5 +49,19 @@ export class PresentationComponent {
 
   public openProjectsDialog(): void {
     this.itemsDialogService.openItemsDialog([])
+  }
+
+  private setMetaTags() {
+    this.title.setTitle('Rafael Chicovis');
+    this.meta.addTags([
+      { name: 'description', content: 'Rafael Chicovis`s personal site' },
+      { property: 'og:title', content: 'Rafael Chicovis' },
+      { property: 'og:description', content: 'Rafael Chicovis`s personal site' },
+      { property: 'og:image', content: `${environment.appUrl}/link-preview.png` },
+      { property: 'og:url', content:  environment.appUrl},
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:site', content: '@rafk_chicovis' },
+      { property: 'twitter:creator', content: '@rafk_chicovis' },
+    ]);
   }
 }

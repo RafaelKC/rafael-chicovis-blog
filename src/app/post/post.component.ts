@@ -110,6 +110,7 @@ export class PostComponent implements OnInit, AfterViewInit, OnDestroy {
       { property: 'og:description', content: this.post.name },
       { property: 'og:image', content: this.post.thumbnailUrl },
       { property: 'og:url', content: this.post.postDownloadUrl },
+      { property: 'twitter:card', content: this.post.name },
     ]);
   }
 }
