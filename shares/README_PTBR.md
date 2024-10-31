@@ -4,12 +4,14 @@ In [English](../README.md) | Em [Português](README_PTBR.md)
 
 ---
 
-Um blog pessoal simples, baseado em markdown, para compartilhar conhecimentos e experiências. (*Atualmente em construção...*)
+Um blog pessoal simples, baseado em markdown, para compartilhar conhecimentos e experiências.
 
-| ![img.png](startup-page-v1.png) | ![img.png](post-page-v1.png)  |
-|---------------------------------|-------------------------------|
+|![img.png](main-screen.png)| ![img.png](white-main-screen.png)  |
+|-------------------------------------|--------------------------------------|
+|![img.png](post-screen.png)| ![img.png](posts-screen.png)  |
+|![img.png](links-screen.png)  |
 
-> Você pode ver este site em produção [aqui]() (*Em breve...*)!
+> Você pode ver este site em produção [aqui](https://rafael-chicovis-blog-front.onrender.com/)!
 
 ## Funcionalidades
 * Design Responsivo;
@@ -25,14 +27,14 @@ Um blog pessoal simples, baseado em markdown, para compartilhar conhecimentos e 
 
 
 ### **Backend**
-* [.NET v9](https://dotnet.microsoft.com/en-us/) (*Em progresso...*);
-* [Supabase](https://supabase.com) (*Em progresso...*);
+* [.NET v9](https://dotnet.microsoft.com/en-us/);
+* [Supabase](https://supabase.com);
 
 ### **Banco de dados**
-* [PostgreSQL](https://www.postgresql.org) no Supabese (*Em progresso...*);
+* [PostgreSQL](https://www.postgresql.org) no Supabese;
 
 ### **Hospedagem**
-* [GitHub Pages](https://pages.github.com)
+* [Render](https://dashboard.render.com)
 
 ## Rode esse projeto
 ### Rode o frontend
@@ -45,13 +47,30 @@ npm install -g @angular/cli
 #### Step by step
 * Clone o repositório e instale os pacotes:
 ```bash
-git clone https://github.com/RafaelKC/rafael-chicovis-blog.git |
-cd rafael-chicovis-blog |
+git clone https://github.com/RafaelKC/rafael-chicovis-blog.git && \
+cd ./rafael-chicovis-blog && \
 npm i
 ```
 * Rode o servidor
 ```bash
  ng serve
 ```
+
+### Run front end
+#### Requirements
+* .NET 9: [Install Here;](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+* [Supabase](https://supabase.com);
+
+#### Step by step
+* No repositório do projeto:
+```bash
+cd ./Backend/RafaelChicovisBlog
+```
+* Configure o Supabase no _appsettings.Development.json_;
+* rode o backend:
+```bash
+dotnet run
+```
+* Configure o backend URL no do front _environment.ts_.
 
 
