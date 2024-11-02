@@ -35,6 +35,10 @@ fa-icon.copy {
     max-height: 100%;
     overflow: auto;
     padding: 0 10px 0 0;
+
+    img {
+      max-width: 100%;
+    }
   }
 }
 
